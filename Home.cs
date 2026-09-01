@@ -14,6 +14,7 @@ namespace MyMzansi
 {
     public partial class Home : Form
     {
+        private List<Issue> masterIssuesList = new List<Issue>();
         public Home()
         {
             InitializeComponent();
@@ -21,9 +22,9 @@ namespace MyMzansi
 
         private void reportIssuesBtn_Click(object sender, EventArgs e)
         {
-            using (ReportIssuesPage reportIssuesPage = new ReportIssuesPage())
+            using (IssueDashboardForm dashboard = new IssueDashboardForm(masterIssuesList))
             {
-                reportIssuesPage.ShowDialog();
+                dashboard.ShowDialog();
             }
         }
 

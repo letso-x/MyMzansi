@@ -52,6 +52,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueDashboardForm.Designer.cs">
+      <DependentUpon>IssueDashboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Issue.cs" />
     <Compile Include="Program.cs" />
@@ -64,6 +70,9 @@
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueDashboardForm.resx">
+      <DependentUpon>IssueDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
