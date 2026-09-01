@@ -113,6 +113,7 @@
             this.imageUploadbtn.TabIndex = 7;
             this.imageUploadbtn.Text = "Upload Image";
             this.imageUploadbtn.UseVisualStyleBackColor = true;
+            this.imageUploadbtn.Click += new System.EventHandler(this.imageUploadbtn_Click);
             // 
             // uploadedImagePreview
             // 
@@ -126,9 +127,9 @@
             // 
             this.cancelBtn.Location = new System.Drawing.Point(35, 630);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelBtn.Size = new System.Drawing.Size(120, 23);
             this.cancelBtn.TabIndex = 9;
-            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.Text = "Back to Main Menu";
             this.cancelBtn.UseVisualStyleBackColor = true;
             // 
             // submitBtn
@@ -139,6 +140,7 @@
             this.submitBtn.TabIndex = 10;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // ReportIssuesPage
             // 
