@@ -36,7 +36,6 @@
             // 
             // welcomeLabel
             // 
-            this.welcomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.FromArgb(31, 41, 55);
@@ -65,25 +64,31 @@
             // 
             // btnLocalEvents
             // 
-            this.btnLocalEvents.Enabled = false;
+            this.btnLocalEvents.BackColor = System.Drawing.Color.FromArgb(18, 53, 91);
+            this.btnLocalEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLocalEvents.ForeColor = System.Drawing.Color.White;
             this.btnLocalEvents.Location = new System.Drawing.Point(263, 230);
             this.btnLocalEvents.Name = "btnLocalEvents";
             this.btnLocalEvents.Size = new System.Drawing.Size(260, 61);
             this.btnLocalEvents.TabIndex = 2;
-            this.btnLocalEvents.Text = "Local Events and Announcements (Coming Soon)";
-            this.btnLocalEvents.UseVisualStyleBackColor = true;
+            this.btnLocalEvents.Text = "Local Events and Announcements";
+            this.btnLocalEvents.UseVisualStyleBackColor = false;
+            this.btnLocalEvents.Click += new System.EventHandler(this.localEventsBtn_Click);
             // 
             // btnServiceRequestStatus
             // 
-            this.btnServiceRequestStatus.Enabled = false;
+            this.btnServiceRequestStatus.BackColor = System.Drawing.Color.FromArgb(18, 53, 91);
+            this.btnServiceRequestStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServiceRequestStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnServiceRequestStatus.ForeColor = System.Drawing.Color.White;
             this.btnServiceRequestStatus.Location = new System.Drawing.Point(263, 312);
             this.btnServiceRequestStatus.Name = "btnServiceRequestStatus";
             this.btnServiceRequestStatus.Size = new System.Drawing.Size(260, 61);
             this.btnServiceRequestStatus.TabIndex = 3;
-            this.btnServiceRequestStatus.Text = "Service Request Status (Coming Soon)";
-            this.btnServiceRequestStatus.UseVisualStyleBackColor = true;
+            this.btnServiceRequestStatus.Text = "Service Request Status";
+            this.btnServiceRequestStatus.UseVisualStyleBackColor = false;
+            this.btnServiceRequestStatus.Click += new System.EventHandler(this.serviceRequestStatusBtn_Click);
             // 
             // Home
             // 

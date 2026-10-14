@@ -28,6 +28,20 @@ namespace MyMzansi
             }
         }
 
-        
+        private void localEventsBtn_Click(object sender, EventArgs e)
+        {
+            using (LocalEventsForm eventsForm = new LocalEventsForm())
+            {
+                eventsForm.ShowDialog(this);
+            }
+        }
+
+        private void serviceRequestStatusBtn_Click(object sender, EventArgs e)
+        {
+            using (ServiceRequestStatusForm statusForm = new ServiceRequestStatusForm())
+            {
+                statusForm.ShowDialog(this);
+            }
+        }
     }
 }

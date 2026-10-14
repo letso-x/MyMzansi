@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventRepository.cs" />
+    <Compile Include="Events\EventSearchService.cs" />
+    <Compile Include="Events\EventRecommendationService.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +62,9 @@
     <Compile Include="IssueDashboardForm.Designer.cs">
       <DependentUpon>IssueDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalEventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Issue.cs" />
     <Compile Include="Program.cs" />
@@ -67,6 +74,9 @@
     </Compile>
     <Compile Include="ReportIssuesPage.Designer.cs">
       <DependentUpon>ReportIssuesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRequestStatusForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
