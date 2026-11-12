@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -42,6 +41,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -50,6 +50,18 @@
     <Compile Include="Events\EventRepository.cs" />
     <Compile Include="Events\EventSearchService.cs" />
     <Compile Include="Events\EventRecommendationService.cs" />
+    <Compile Include="Data\ServiceRequestRepository.cs" />
+    <Compile Include="DataStructures\GeneralTree.cs" />
+    <Compile Include="DataStructures\BinaryTree.cs" />
+    <Compile Include="DataStructures\BinarySearchTree.cs" />
+    <Compile Include="DataStructures\AVLTree.cs" />
+    <Compile Include="DataStructures\RedBlackTree.cs" />
+    <Compile Include="DataStructures\BinaryMinHeap.cs" />
+    <Compile Include="DataStructures\ServiceRequestPriorityQueue.cs" />
+    <Compile Include="DataStructures\Graph.cs" />
+    <Compile Include="DataStructures\DisjointSet.cs" />
+    <Compile Include="DataStructures\WeightedGraph.cs" />
+    <Compile Include="DataStructures\KruskalMst.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +79,7 @@
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\ServiceRequest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportIssuesPage.cs">
@@ -78,6 +91,7 @@
     <Compile Include="ServiceRequestStatusForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Services\ServiceRequestManager.cs" />
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,10 +119,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Tests\DataStructureSmokeTests.ps1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include=".github\copilot-instructions.md" />
+    <Content Include="ImplementationReport.md" />
+    <Content Include="ProjectCompletionReport.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

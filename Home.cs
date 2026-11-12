@@ -1,4 +1,5 @@
 ﻿using MyMzansi.Models;
+using MyMzansi.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,11 @@ namespace MyMzansi
     public partial class Home : Form
     {
         private List<Issue> masterIssuesList = new List<Issue>();
+        private readonly ServiceRequestManager serviceRequestManager;
         public Home()
         {
             InitializeComponent();
+            serviceRequestManager = new ServiceRequestManager();
         }
 
         private void reportIssuesBtn_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace MyMzansi
 
         private void serviceRequestStatusBtn_Click(object sender, EventArgs e)
         {
-            using (ServiceRequestStatusForm statusForm = new ServiceRequestStatusForm())
+            using (ServiceRequestStatusForm statusForm = new ServiceRequestStatusForm(serviceRequestManager, masterIssuesList))
             {
                 statusForm.ShowDialog(this);
             }
